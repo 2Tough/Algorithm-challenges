@@ -20,8 +20,23 @@ h2 {
     text-shadow: 5px 5px #051f2b;
 }
 
+h3 {
+    text-shadow: 3px 3px #051f2b;
+}
+
 .answer-one {
     display: none;
     
+
+}
+
+.functionOP {
+    background: black;
+    border: 2px solid rgb(4, 185, 4);
+    width: 50%;
+}
+
+.functionOP p {
+    padding-left: 1em;
 
 }
