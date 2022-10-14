@@ -24,19 +24,19 @@ h3 {
     text-shadow: 3px 3px #051f2b;
 }
 
-.answer-one {
+.resolved-function-screen,
+.hide-screen-btn
+ {
     display: none;
     
 
 }
 
-.functionOP {
+.function-question,
+.resolved-function-screen {
     background: black;
     border: 2px solid rgb(4, 185, 4);
     width: 50%;
-}
-
-.functionOP p {
     padding-left: 1em;
-
 }
+
