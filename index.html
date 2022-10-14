@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="index.css" rel="stylesheet">
+    <title>Javascript challenges</title>
+</head>
+<body>
+    <main>
+        <section>
+            <h2>Basic algorithms</h2>
+            <h3>Find the Longest Word in a String</h3>
+
+            <p>Return the length of the longest word in the provided sentence.
+
+                Your response should be a number.
+                
+                </p>
+
+            <p>Tests</p>
+            <ul>
+              <li>  1:findLongestWordLength("The quick brown fox jumped over the lazy dog") should return a number.</li>
+              <li>  2:findLongestWordLength("The quick brown fox jumped over the lazy dog") should return 6.</li>
+              <li>  3:findLongestWordLength("May the force be with you") should return 5.</li>
+              <li>  4:findLongestWordLength("Google do a barrel roll") should return 6.</li>
+              <li>  5:findLongestWordLength("What is the average airspeed velocity of an unladen swallow") should return 8.</li>
+              <li>  6:findLongestWordLength("What if we try a super-long word such as otorhinolaryngology") should return 19.</li></ul>
+
+              <p>function findLongestWordLength(str) { </p>
+                <p>return longestWord</p>
+                <p>}</p>
+
+              <button id="show-answer-one">Show answer</button>
+              <div id='one' class="answer-one">
+                
+                <p>function findLongestWordLength(str) {
+                    
+                <p>let splited = str.split(' ')</p>
+                <p>let sortedTest = splited.map(w => w.length)</p>
+                <p>let mapped = sortedTest.sort((function(a,b) { return a - b; }))</p>
+                    
+                <p>    return mapped[mapped.length-1];</p>
+                <p>  }</p>
+                  
+                <p>  findLongestWordLength("The quick brown fox jumped over the lazy dog");</p>
+
+                <button id="hide-answer-one">Hide answer</button>
+              </div>
+
+        </section>
+    </main>
+</body>
+<script src="index.js"></script>
+</html>
