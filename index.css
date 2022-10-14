@@ -7,20 +7,33 @@ body {
 
 
 section {
-    padding-left: 1em;
+    
+    padding: 2em 1em;
     background: #0F2027;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     color: white;
 
+
 }
 
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    width: 80%;
+    margin: 0 auto;
+   
+}
+
+
 h2 {
-    font-size: 2em;
+    font-size: 2.5em;
     text-shadow: 5px 5px #051f2b;
 }
 
 h3 {
+    font-size: 2.0em;
     text-shadow: 3px 3px #051f2b;
 }
 
@@ -38,5 +51,11 @@ h3 {
     border: 2px solid rgb(4, 185, 4);
     width: 50%;
     padding-left: 1em;
+}
+
+button {
+    margin: 1em 0;
+    padding: 0.8em 1.2em;
+    
 }
 
