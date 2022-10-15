@@ -214,60 +214,66 @@
                         <button id="show-answer-one" class="show-answer-btn">Show answer</button>
                         <div class="resolved-function-screen">
                           
+                          <p>function largestOfFour(arr) {</p>
+                              
+                          <p>let mappedArray = arr.map(num => num.sort(function(a, b){return (a - b);}))</p>
+                          <p>let filtered = mappedArray.map(num => num[3])</p>
                           <p></p>
                               
-                          <p></p>
-                          <p></p>
-                          <p></p>
-                              
-                          <p></p>
+                          <p> return filtered;</p>
                           <p>  }</p>
                             
-                          <p> </p>
+                          <p>largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]); </p>
 
                           
                         </div>
                         <button id="hide-answer-one" class="hide-screen-btn">Hide answer</button>
 
-                        <h3>Return Largest Numbers in Arrays</h3>
+                        <h3>Confirm the Ending</h3>
 
-                        <p>Return an array consisting of the largest number from each provided sub-array. For simplicity, the provided array will contain exactly 4 sub-arrays.
-  
-                          Remember, you can iterate through an array with a simple for loop, and access each member with array syntax arr[i].
-                            
-                            </p>
+                        <p>Check if a string (first argument, str) ends with the given target string (second argument, target).
+
+                          This challenge can be solved with the .endsWith() method, which was introduced in ES2015. But for the purpose of this challenge, we would like you to use one of the JavaScript substring methods instead.</p>
   
                         <p>Tests</p>
                         <ul>
-                          <li></li>
-                          <li></li>
-                          <li></li>
-                          <li></li>
+                          <li>confirmEnding("Bastian", "n") should return true.</li>
+                          <li>confirmEnding("Congratulation", "on") should return true.</li>
+                          <li>confirmEnding("Connor", "n") should return false.</li>
+                          <li>confirmEnding("Walking on water and developing software from a specification are easy if both are frozen", "specification") should return false.</li>
+                          <li>confirmEnding("He has to give me a new name", "name") should return true.</li>
+                          <li>confirmEnding("Open sesame", "same") should return true.</li>
+                          <li>confirmEnding("Open sesame", "sage") should return false.</li>
+                          <li>confirmEnding("Open sesame", "game") should return false.</li>
+                          <li>confirmEnding("If you want to save our world, you must hurry. We dont know how much longer we can withstand the nothing", "mountain") should return false.</li>
+                          <li>confirmEnding("Abstraction", "action") should return true.</li>
+                          <li>Your code should not use the built-in method .endsWith() to solve the challenge.</li>
+               
                           
                           
                           </ul>
                           
                           <div class="function-question">
-                            <p>function {</p>
-                              <p>  return </p>
+                            <p>function confirmEnding(str, target) {</p>
+                              <p> return str;</p>
                               <p>}</p>
-                              <p></p>
+                              <p>confirmEnding("Bastian", "n");</p>
                           </div>
                         
   
                           <button id="show-answer-one" class="show-answer-btn">Show answer</button>
                           <div class="resolved-function-screen">
                             
-                            <p></p>
+                            <p>function confirmEnding(str, target) {</p>
                                 
-                            <p></p>
-                            <p></p>
-                            <p></p>
+                            <p>if(str.substring(str.length, str.length - target.length) == target) {</p>
+                            <p> return true</p>
+                            <p>} else {</p>
                                 
-                            <p></p>
+                            <p>return false</p>
                             <p>  }</p>
                               
-                            <p> </p>
+                            <p> }</p>
   
                             
                           </div>
@@ -275,141 +281,581 @@
 
 
                           
-                        <h3>Return Largest Numbers in Arrays</h3>
+                        <h3>Repeat a String Repeat a String</h3>
 
-                        <p>Return an array consisting of the largest number from each provided sub-array. For simplicity, the provided array will contain exactly 4 sub-arrays.
-  
-                          Remember, you can iterate through an array with a simple for loop, and access each member with array syntax arr[i].
-                            
-                            </p>
+                        <p>Repeat a given string str (first argument) for num times (second argument). Return an empty string if num is not a positive number. For the purpose of this challenge, do not use the built-in .repeat() method.</p>
   
                         <p>Tests</p>
                         <ul>
-                          <li></li>
-                          <li></li>
-                          <li></li>
-                          <li></li>
+                          <li>repeatStringNumTimes("*", 3) should return the string ***.</li>
+                          <li>repeatStringNumTimes("abc", 3) should return the string abcabcabc.</li>
+                          <li>repeatStringNumTimes("abc", 4) should return the string abcabcabcabc.</li>
+                          <li>repeatStringNumTimes("abc", 1) should return the string abc.</li>
+                          <li>repeatStringNumTimes("*", 8) should return the string ********.</li>
+                          <li>repeatStringNumTimes("abc", -2) should return an empty string ("").</li>
+                          <li>The built-in repeat() method should not be used.</li>
+                          <li>Waiting:repeatStringNumTimes("abc", 0) should return "".</li>
                           
                           
                           </ul>
                           
                           <div class="function-question">
-                            <p>function {</p>
-                              <p>  return </p>
+                            <p>function repeatStringNumTimes(str, num) {</p>
+                              <p>return str;</p>
                               <p>}</p>
-                              <p></p>
+                              <p>repeatStringNumTimes("abc", 3);</p>
                           </div>
                         
   
                           <button id="show-answer-one" class="show-answer-btn">Show answer</button>
                           <div class="resolved-function-screen">
                             
-                            <p></p>
+                            <p>function repeatStringNumTimes(str, num) {</p>
                                 
-                            <p></p>
-                            <p></p>
-                            <p></p>
+                            <p>let repeatedString = ' '</p>
+                            <p>for (let i = 0; i < num ; i++){</p>
+                            <p>repeatedString += str</p>
                                 
-                            <p></p>
+                            <p> }</p>
+                            <p>  return repeatedString</p>
                             <p>  }</p>
                               
-                            <p> </p>
+                            <p> repeatStringNumTimes("abc", 3);</p>
   
                             
                           </div>
                           <button id="hide-answer-one" class="hide-screen-btn">Hide answer</button>
 
 
-                          <h3>Return Largest Numbers in Arrays</h3>
+                          <h3>Truncate a String</h3>
 
-                          <p>Return an array consisting of the largest number from each provided sub-array. For simplicity, the provided array will contain exactly 4 sub-arrays.
-    
-                            Remember, you can iterate through an array with a simple for loop, and access each member with array syntax arr[i].
-                              
-                              </p>
+                          <p>Truncate a string (first argument) if it is longer than the given maximum string length (second argument). Return the truncated string with a ... ending.</p>
     
                           <p>Tests</p>
                           <ul>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
+                            <li>truncateString("A-tisket a-tasket A green and yellow basket", 8) should return the string A-tisket....</li>
+                            <li>truncateString("Peter Piper picked a peck of pickled peppers", 11) should return the string Peter Piper....</li>
+                            <li>truncateString("A-tisket a-tasket A green and yellow basket", "A-tisket a-tasket A green and yellow basket".length) should return the string A-tisket a-tasket A green and yellow basket.</li>
+                            <li>truncateString("A-tisket a-tasket A green and yellow basket", "A-tisket a-tasket A green and yellow basket".length + 2) should return the string A-tisket a-tasket A green and yellow basket.</li>
+                            <li>truncateString("A-", 1) should return the string A....</li>
+                            <li>truncateString("Absolutely Longer", 2) should return the string Ab....</li>
+                            
                             
                             
                             </ul>
                             
                             <div class="function-question">
-                              <p>function {</p>
-                                <p>  return </p>
-                                <p>}</p>
-                                <p></p>
+                              <p>function truncateString(str, num) {</p>
+                                  
+                              <p>return str;</p>
+                              <p>}</p>
+                              <p>truncateString("A-tisket a-tasket A green and yellow basket", 8);</p>
                             </div>
                           
     
                             <button id="show-answer-one" class="show-answer-btn">Show answer</button>
                             <div class="resolved-function-screen">
                               
-                              <p></p>
-                                  
-                              <p></p>
-                              <p></p>
-                              <p></p>
-                                  
-                              <p></p>
-                              <p>  }</p>
-                                
-                              <p> </p>
+
+                              <p>function truncateString(str, num) {</p>
+                                <p>let dots = '...'</p>
+                                <p>if(str.length <= num ) {</p>
+                                <p> return str</p>
+                                <p>} else {</p>
+                                <p> return str.substring(num, 0).concat(dots)</p>
+                                <p> }</p>
+                                <p> }</p>
     
                               
                             </div>
                             <button id="hide-answer-one" class="hide-screen-btn">Hide answer</button>
   
 
-                            <h3>Return Largest Numbers in Arrays</h3>
+                        <h3>Finders Keepers</h3>
 
-                            <p>Return an array consisting of the largest number from each provided sub-array. For simplicity, the provided array will contain exactly 4 sub-arrays.
-      
-                              Remember, you can iterate through an array with a simple for loop, and access each member with array syntax arr[i].
-                                
-                                </p>
+                        <p>Create a function that looks through an array arr and returns the first element in it that passes a 'truth test'. This means that given an element x, the 'truth test' is passed if func(x) is true. If no element passes the test, return undefined.
+
+                        </p>
+  
+                        <p>Tests</p>
+                        <ul>
+                          <li>findElement([1, 3, 5, 8, 9, 10], function(num) { return num % 2 === 0; }) should return 8.</li>
+                          <li>findElement([1, 3, 5, 9], function(num) { return num % 2 === 0; }) should return undefined.</li>
+                     
+                        </ul>
+                          
+                          <div class="function-question">
+                            <p>function findElement(arr, func) {</p>
+                              <p>   let num = 0; </p>
+                              
+                              <p> return num;</p>
+                              <p>}</p>
+                              <p>findElement([1, 2, 3, 4], num => num % 2 === 0);</p>
+                          </div>
+                          
+                          <button id="show-answer-one" class="show-answer-btn">Show answer</button>
+                          <div class="resolved-function-screen">
+                            <p>function findElement(arr, func) {</p>
+                            <p> for (let i = 0; i < arr.length; i++) {</p>
+                            <p>  if (arr[i] % 2 === 0) {</p>
+                            <p>  return arr[i]</p>
+                            <p>  break</p>
+                            <p>  }</p>
+                            <p>  }</p>
+                            <p>  }</p>
+                            <p>findElement([1, 2, 3, 4], num => num % 2 === 0);</p>
+                            </div>
+                          <button id="hide-answer-one" class="hide-screen-btn">Hide answer</button>
+
+                          <h3>Boo who</h3>
+
+                          <p>Check if a value is classified as a boolean primitive. Return true or false.
+
+                            Boolean primitives are true and false.</p>
+    
+                          <p>Tests</p>
+                          <ul>
+                            <li>booWho(true) should return true.</li>
+                            <li>booWho(false) should return true.</li>
+                            <li>booWho([1, 2, 3]) should return false.</li>
+                            <li>Waiting:booWho([].slice) should return false.</li>    
+                            <li>booWho({ "a": 1 }) should return false.</li>
+                            <li>booWho(1) should return false.</li>
+                            <li>booWho(NaN) should return false.</li>
+                            <li>booWho("a") should return false.</li>    
+                            <li>booWho("true") should return false.</li>
+                            <li>booWho("false") should return false.</li>
+                          
+                          </ul>
+                            
+                            <div class="function-question">
+                              <p>function booWho(bool) {</p>
+                                <p>  return  bool</p>
+                                <p>}</p>
+                                <p>booWho(null);</p>
+                            </div>
+                            
+                            <button id="show-answer-one" class="show-answer-btn">Show answer</button>
+                            <div class="resolved-function-screen">
+                              <p>function booWho(bool) {</p>
+                              <p>if (bool == false ) {</p>
+                              <p>  return true</p>
+                              <p>} else if(bool === true) {</p>
+                              <p> return true</p>
+                              <p> } else {</p>
+                              <p> return false</p>
+                              <p> }</p>
+                              <p> }</p>
+                              <p> booWho(null);</p>
+                              </div>
+                            <button id="hide-answer-one" class="hide-screen-btn">Hide answer</button>
+  
+                            <h3>Title Case a Sentence</h3>
+
+                            <p>Return the provided string with the first letter of each word capitalized. Make sure the rest of the word is in lower case.
+
+                              For the purpose of this exercise, you should also capitalize connecting words like the and of.</p>
       
                             <p>Tests</p>
                             <ul>
-                              <li></li>
-                              <li></li>
-                              <li></li>
-                              <li></li>
-                              
-                              
-                              </ul>
+                              <li>titleCase("I'm a little tea pot") should return a string.</li>
+                              <li>titleCase("I'm a little tea pot") should return the string I'm A Little Tea Pot.</li>
+                              <li>titleCase("sHoRt AnD sToUt") should return the string Short And Stout.</li>
+                              <li>titleCase("HERE IS MY HANDLE HERE IS MY SPOUT") should return the string Here Is My Handle Here Is My Spout.</li>
+                            </ul>
                               
                               <div class="function-question">
-                                <p>function {</p>
-                                  <p>  return </p>
+                                <p>function titleCase(str) {</p>
+                                  <p>    return str; </p>
                                   <p>}</p>
-                                  <p></p>
+                                  <p>titleCase("I'm a little tea pot");</p>
                               </div>
-                            
-      
+                              
                               <button id="show-answer-one" class="show-answer-btn">Show answer</button>
                               <div class="resolved-function-screen">
-                                
-                                <p></p>
-                                    
+                                <p>resolved function</p>
                                 <p></p>
                                 <p></p>
                                 <p></p>
-                                    
                                 <p></p>
                                 <p>  }</p>
-                                  
                                 <p> </p>
-      
-                                
-                              </div>
+                                </div>
                               <button id="hide-answer-one" class="hide-screen-btn">Hide answer</button>
     
+                              <h3>test title</h3>
+
+                              <p>description</p>
+        
+                              <p>Tests</p>
+                              <ul>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                              </ul>
+                                
+                                <div class="function-question">
+                                  <p>empty function {</p>
+                                    <p>  return </p>
+                                    <p>}</p>
+                                    <p></p>
+                                </div>
+                                
+                                <button id="show-answer-one" class="show-answer-btn">Show answer</button>
+                                <div class="resolved-function-screen">
+                                  <p>resolved function</p>
+                                  <p></p>
+                                  <p></p>
+                                  <p></p>
+                                  <p></p>
+                                  <p>  }</p>
+                                  <p> </p>
+                                  </div>
+                                <button id="hide-answer-one" class="hide-screen-btn">Hide answer</button>
       
+                                <h3>test title</h3>
+
+                                <p>description</p>
+          
+                                <p>Tests</p>
+                                <ul>
+                                  <li></li>
+                                  <li></li>
+                                  <li></li>
+                                  <li></li>
+                                </ul>
+                                  
+                                  <div class="function-question">
+                                    <p>empty function {</p>
+                                      <p>  return </p>
+                                      <p>}</p>
+                                      <p></p>
+                                  </div>
+                                  
+                                  <button id="show-answer-one" class="show-answer-btn">Show answer</button>
+                                  <div class="resolved-function-screen">
+                                    <p>resolved function</p>
+                                    <p></p>
+                                    <p></p>
+                                    <p></p>
+                                    <p></p>
+                                    <p>  }</p>
+                                    <p> </p>
+                                    </div>
+                                  <button id="hide-answer-one" class="hide-screen-btn">Hide answer</button>
+        
+                                  <h3>test title</h3>
+
+                                  <p>description</p>
+            
+                                  <p>Tests</p>
+                                  <ul>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                  </ul>
+                                    
+                                    <div class="function-question">
+                                      <p>empty function {</p>
+                                        <p>  return </p>
+                                        <p>}</p>
+                                        <p></p>
+                                    </div>
+                                    
+                                    <button id="show-answer-one" class="show-answer-btn">Show answer</button>
+                                    <div class="resolved-function-screen">
+                                      <p>resolved function</p>
+                                      <p></p>
+                                      <p></p>
+                                      <p></p>
+                                      <p></p>
+                                      <p>  }</p>
+                                      <p> </p>
+                                      </div>
+                                    <button id="hide-answer-one" class="hide-screen-btn">Hide answer</button>
+          
+                                    <h3>test title</h3>
+
+                                    <p>description</p>
+              
+                                    <p>Tests</p>
+                                    <ul>
+                                      <li></li>
+                                      <li></li>
+                                      <li></li>
+                                      <li></li>
+                                    </ul>
+                                      
+                                      <div class="function-question">
+                                        <p>empty function {</p>
+                                          <p>  return </p>
+                                          <p>}</p>
+                                          <p></p>
+                                      </div>
+                                      
+                                      <button id="show-answer-one" class="show-answer-btn">Show answer</button>
+                                      <div class="resolved-function-screen">
+                                        <p>resolved function</p>
+                                        <p></p>
+                                        <p></p>
+                                        <p></p>
+                                        <p></p>
+                                        <p>  }</p>
+                                        <p> </p>
+                                        </div>
+                                      <button id="hide-answer-one" class="hide-screen-btn">Hide answer</button>
+            
+                                      <h3>test title</h3>
+
+                                      <p>description</p>
+                
+                                      <p>Tests</p>
+                                      <ul>
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                      </ul>
+                                        
+                                        <div class="function-question">
+                                          <p>empty function {</p>
+                                            <p>  return </p>
+                                            <p>}</p>
+                                            <p></p>
+                                        </div>
+                                        
+                                        <button id="show-answer-one" class="show-answer-btn">Show answer</button>
+                                        <div class="resolved-function-screen">
+                                          <p>resolved function</p>
+                                          <p></p>
+                                          <p></p>
+                                          <p></p>
+                                          <p></p>
+                                          <p>  }</p>
+                                          <p> </p>
+                                          </div>
+                                        <button id="hide-answer-one" class="hide-screen-btn">Hide answer</button>
+              
+                                        <h3>test title</h3>
+
+                                        <p>description</p>
+                  
+                                        <p>Tests</p>
+                                        <ul>
+                                          <li></li>
+                                          <li></li>
+                                          <li></li>
+                                          <li></li>
+                                        </ul>
+                                          
+                                          <div class="function-question">
+                                            <p>empty function {</p>
+                                              <p>  return </p>
+                                              <p>}</p>
+                                              <p></p>
+                                          </div>
+                                          
+                                          <button id="show-answer-one" class="show-answer-btn">Show answer</button>
+                                          <div class="resolved-function-screen">
+                                            <p>resolved function</p>
+                                            <p></p>
+                                            <p></p>
+                                            <p></p>
+                                            <p></p>
+                                            <p>  }</p>
+                                            <p> </p>
+                                            </div>
+                                          <button id="hide-answer-one" class="hide-screen-btn">Hide answer</button>
+                
+                                          <h3>test title</h3>
+
+                                          <p>description</p>
+                    
+                                          <p>Tests</p>
+                                          <ul>
+                                            <li></li>
+                                            <li></li>
+                                            <li></li>
+                                            <li></li>
+                                          </ul>
+                                            
+                                            <div class="function-question">
+                                              <p>empty function {</p>
+                                                <p>  return </p>
+                                                <p>}</p>
+                                                <p></p>
+                                            </div>
+                                            
+                                            <button id="show-answer-one" class="show-answer-btn">Show answer</button>
+                                            <div class="resolved-function-screen">
+                                              <p>resolved function</p>
+                                              <p></p>
+                                              <p></p>
+                                              <p></p>
+                                              <p></p>
+                                              <p>  }</p>
+                                              <p> </p>
+                                              </div>
+                                            <button id="hide-answer-one" class="hide-screen-btn">Hide answer</button>
+                  
+                                            <h3>test title</h3>
+
+                                            <p>description</p>
+                      
+                                            <p>Tests</p>
+                                            <ul>
+                                              <li></li>
+                                              <li></li>
+                                              <li></li>
+                                              <li></li>
+                                            </ul>
+                                              
+                                              <div class="function-question">
+                                                <p>empty function {</p>
+                                                  <p>  return </p>
+                                                  <p>}</p>
+                                                  <p></p>
+                                              </div>
+                                              
+                                              <button id="show-answer-one" class="show-answer-btn">Show answer</button>
+                                              <div class="resolved-function-screen">
+                                                <p>resolved function</p>
+                                                <p></p>
+                                                <p></p>
+                                                <p></p>
+                                                <p></p>
+                                                <p>  }</p>
+                                                <p> </p>
+                                                </div>
+                                              <button id="hide-answer-one" class="hide-screen-btn">Hide answer</button>
+                    
+                                              <h3>test title</h3>
+
+                                              <p>description</p>
+                        
+                                              <p>Tests</p>
+                                              <ul>
+                                                <li></li>
+                                                <li></li>
+                                                <li></li>
+                                                <li></li>
+                                              </ul>
+                                                
+                                                <div class="function-question">
+                                                  <p>empty function {</p>
+                                                    <p>  return </p>
+                                                    <p>}</p>
+                                                    <p></p>
+                                                </div>
+                                                
+                                                <button id="show-answer-one" class="show-answer-btn">Show answer</button>
+                                                <div class="resolved-function-screen">
+                                                  <p>resolved function</p>
+                                                  <p></p>
+                                                  <p></p>
+                                                  <p></p>
+                                                  <p></p>
+                                                  <p>  }</p>
+                                                  <p> </p>
+                                                  </div>
+                                                <button id="hide-answer-one" class="hide-screen-btn">Hide answer</button>
+                      
+                                                <h3>test title</h3>
+
+                                                <p>description</p>
+                          
+                                                <p>Tests</p>
+                                                <ul>
+                                                  <li></li>
+                                                  <li></li>
+                                                  <li></li>
+                                                  <li></li>
+                                                </ul>
+                                                  
+                                                  <div class="function-question">
+                                                    <p>empty function {</p>
+                                                      <p>  return </p>
+                                                      <p>}</p>
+                                                      <p></p>
+                                                  </div>
+                                                  
+                                                  <button id="show-answer-one" class="show-answer-btn">Show answer</button>
+                                                  <div class="resolved-function-screen">
+                                                    <p>resolved function</p>
+                                                    <p></p>
+                                                    <p></p>
+                                                    <p></p>
+                                                    <p></p>
+                                                    <p>  }</p>
+                                                    <p> </p>
+                                                    </div>
+                                                  <button id="hide-answer-one" class="hide-screen-btn">Hide answer</button>
+                        
+                                                  <h3>test title</h3>
+
+                                                  <p>description</p>
+                            
+                                                  <p>Tests</p>
+                                                  <ul>
+                                                    <li></li>
+                                                    <li></li>
+                                                    <li></li>
+                                                    <li></li>
+                                                  </ul>
+                                                    
+                                                    <div class="function-question">
+                                                      <p>empty function {</p>
+                                                        <p>  return </p>
+                                                        <p>}</p>
+                                                        <p></p>
+                                                    </div>
+                                                    
+                                                    <button id="show-answer-one" class="show-answer-btn">Show answer</button>
+                                                    <div class="resolved-function-screen">
+                                                      <p>resolved function</p>
+                                                      <p></p>
+                                                      <p></p>
+                                                      <p></p>
+                                                      <p></p>
+                                                      <p>  }</p>
+                                                      <p> </p>
+                                                      </div>
+                                                    <button id="hide-answer-one" class="hide-screen-btn">Hide answer</button>
+                          
+                                                    <h3>test title</h3>
+
+                                                    <p>description</p>
+                              
+                                                    <p>Tests</p>
+                                                    <ul>
+                                                      <li></li>
+                                                      <li></li>
+                                                      <li></li>
+                                                      <li></li>
+                                                    </ul>
+                                                      
+                                                      <div class="function-question">
+                                                        <p>empty function {</p>
+                                                          <p>  return </p>
+                                                          <p>}</p>
+                                                          <p></p>
+                                                      </div>
+                                                      
+                                                      <button id="show-answer-one" class="show-answer-btn">Show answer</button>
+                                                      <div class="resolved-function-screen">
+                                                        <p>resolved function</p>
+                                                        <p></p>
+                                                        <p></p>
+                                                        <p></p>
+                                                        <p></p>
+                                                        <p>  }</p>
+                                                        <p> </p>
+                                                        </div>
+                                                      <button id="hide-answer-one" class="hide-screen-btn">Hide answer</button>
+                            
+                                                                                                                                                                                                                    
 
                       </div>
         </section>
