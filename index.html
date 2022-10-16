@@ -473,13 +473,13 @@
                               
                               <button id="show-answer-one" class="show-answer-btn">Show answer</button>
                               <div class="resolved-function-screen">
-                                <p>resolved function</p>
-                                <p></p>
-                                <p></p>
-                                <p></p>
-                                <p></p>
+                                <p>function titleCase(str) {</p>
+                                <p>let splittedStr = str.split(' ')</p>
+                                <p>let upperedStr = splittedStr.map(word => word.substring(0, 1).toUpperCase()+word.toLowerCase().substring(word.length, 1))</p>
+                                <p>return upperedStr.join(' ')</p>
+                                
                                 <p>  }</p>
-                                <p> </p>
+                                <p>titleCase("I'm a little tea pot"); </p>
                                 </div>
                               <button id="hide-answer-one" class="hide-screen-btn">Hide answer</button>
     
