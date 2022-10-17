@@ -657,100 +657,140 @@
                                       
                                       <button id="show-answer-one" class="show-answer-btn">Show answer</button>
                                       <div class="resolved-function-screen">
-                                        <p>resolved function</p>
-                                        <p></p>
-                                        <p></p>
-                                        <p></p>
-                                        <p></p>
+                                        <p>function mutation(arr) {</p>
+                                        <p>let firstSeparatedStr = arr[0].toLowerCase().split('')</p>
+                                        <p>let secondSeparatedStr = arr[1].toLowerCase().split('')</p>
+                                        <p>let printedString1 = secondSeparatedStr.filter(string => !firstSeparatedStr.includes(string))</p>
+                                        <p>if (!printedString1?.length) {</p>
+                                        <p>return true</p>
+                                        <p>} else {</p>
+                                        <p> return false</p>
                                         <p>  }</p>
-                                        <p> </p>
+                                        <p>  }</p>
+                                        <p>mutation(["hello", "hey"]); </p>
                                         </div>
                                       <button id="hide-answer-one" class="hide-screen-btn">Hide answer</button>
             
-                                      <h3>test title</h3>
+                                      <h3>Chunky Monkey</h3>
 
-                                      <p>description</p>
+                                      <p>Write a function that splits an array (first argument) into groups the length of size (second argument) and returns them as a two-dimensional array.</p>
                 
                                       <p>Tests</p>
                                       <ul>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
+                                        <li>chunkArrayInGroups(["a", "b", "c", "d"], 2) should return [["a", "b"], ["c", "d"]].</li>
+                                        <li>chunkArrayInGroups([0, 1, 2, 3, 4, 5], 3) should return [[0, 1, 2], [3, 4, 5]].</li>
+                                        <li>chunkArrayInGroups([0, 1, 2, 3, 4, 5], 2) should return [[0, 1], [2, 3], [4, 5]].</li>
+                                        <li>Waiting:chunkArrayInGroups([0, 1, 2, 3, 4, 5], 4) should return [[0, 1, 2, 3], [4, 5]].</li>
+                                        <li>Waiting:chunkArrayInGroups([0, 1, 2, 3, 4, 5, 6], 3) should return [[0, 1, 2], [3, 4, 5], [6]].</li>
+                                        <li>chunkArrayInGroups([0, 1, 2, 3, 4, 5, 6, 7, 8], 4) should return [[0, 1, 2, 3], [4, 5, 6, 7], [8]].</li>
+                                        <li>chunkArrayInGroups([0, 1, 2, 3, 4, 5, 6, 7, 8], 2) should return [[0, 1], [2, 3], [4, 5], [6, 7], [8]].</li>
+                                        
                                       </ul>
                                         
                                         <div class="function-question">
-                                          <p>empty function {</p>
-                                            <p>  return </p>
+                                          <p>function chunkArrayInGroups(arr, size) {</p>
+                                            <p>  return arr; </p>
                                             <p>}</p>
-                                            <p></p>
+                                            <p>chunkArrayInGroups(["a", "b", "c", "d"], 2);</p>
                                         </div>
                                         
                                         <button id="show-answer-one" class="show-answer-btn">Show answer</button>
                                         <div class="resolved-function-screen">
-                                          <p>resolved function</p>
-                                          <p></p>
-                                          <p></p>
-                                          <p></p>
-                                          <p></p>
+                                          <p>function chunkArrayInGroups(arr, size) {</p>
+                                          <p>let newArray = []</p>
+                                          <p>for (let i = 0; i < arr.length; i += size ) {</p>
+                                          <p>const pieces = newArray.push(arr.slice(i, i + size))</p>
+                                          
                                           <p>  }</p>
-                                          <p> </p>
+                                          <p>return newArray </p>
+                                          <p>  }</p>
+                                          <p>chunkArrayInGroups(["a", "b", "c", "d"], 2);</p>
                                           </div>
                                         <button id="hide-answer-one" class="hide-screen-btn">Hide answer</button>
-              
-                                        <h3>test title</h3>
 
-                                        <p>description</p>
+                                        <h2>Intermediate Algorithm Scripting</h2>
+
+                                        <h3>Sum All Numbers in a Range</h3>
+                                            <p>We'll pass you an array of two numbers. Return the sum of those two numbers plus the sum of all the numbers between them. The lowest number will not always come first.
+
+                                              For example, sumAll([4,1]) should return 10 because sum of all the numbers between 1 and 4 (both inclusive) is 10.</p>
+                                          
+
+                                        <p>We'll pass you an array of two numbers. Return the sum of those two numbers plus the sum of all the numbers between them. The lowest number will not always come first.
+
+                                          For example, sumAll([4,1]) should return 10 because sum of all the numbers between 1 and 4 (both inclusive) is 10.</p>
                   
                                         <p>Tests</p>
                                         <ul>
-                                          <li></li>
-                                          <li></li>
-                                          <li></li>
-                                          <li></li>
+                                          <li>sumAll([1, 4]) should return a number.</li>
+                                          <li>sumAll([1, 4]) should return 10.</li>
+                                          <li>sumAll([4, 1]) should return 10.</li>
+                                          <li>Waiting:sumAll([5, 10]) should return 45.</li>
+                                          <li>Waiting:sumAll([10, 5]) should return 45.</li>
                                         </ul>
                                           
                                           <div class="function-question">
-                                            <p>empty function {</p>
-                                              <p>  return </p>
+                                            <p>function sumAll(arr) {</p>
+                                              <p> return 1;</p>
                                               <p>}</p>
-                                              <p></p>
+                                              <p>sumAll([1, 4]);</p>
                                           </div>
                                           
                                           <button id="show-answer-one" class="show-answer-btn">Show answer</button>
                                           <div class="resolved-function-screen">
-                                            <p>resolved function</p>
-                                            <p></p>
-                                            <p></p>
-                                            <p></p>
-                                            <p></p>
+                                            <p>function sumAll(arr) {</p>
+                                            <p>let newArray = arr.sort(function(a, b) {
+                                              return a - b });</p>
+                                            <p>let sum = 0</p>
+                                            <p>let firstValue = arr[0]</p>
+                                            <p>let secondValue = arr[1]</p>
+                                            <p>for (let i = firstValue ; i < secondValue+1 ; i++) {</p>
+                                            <p>sum +=i</p>
+                                            
                                             <p>  }</p>
-                                            <p> </p>
+                                            <p>return sum </p>
+                                            <p>  }</p>
+                                            <p>sumAll([1, 4]);</p>
                                             </div>
                                           <button id="hide-answer-one" class="hide-screen-btn">Hide answer</button>
                 
-                                          <h3>test title</h3>
+                                          <h3>Diff Two Arrays</h3>
 
-                                          <p>description</p>
+                                          <p>Compare two arrays and return a new array with any items only found in one of the two given arrays, but not both. In other words, return the symmetric difference of the two arrays.
+
+                                            Note: You can return the array with its elements in any order.</p>
                     
                                           <p>Tests</p>
                                           <ul>
-                                            <li></li>
-                                            <li></li>
-                                            <li></li>
-                                            <li></li>
+                                            <li>diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]) should return an array.</li>
+                                            <li>diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]) should return an array.</li>
+                                            <li>["diorite", "andesite", "grass", "dirt", "pink wool", "dead shrub"], ["diorite", "andesite", "grass", "dirt", "dead shrub"] should return ["pink wool"].</li>
+                                            <li>["andesite", "grass", "dirt", "pink wool", "dead shrub"], ["diorite", "andesite", "grass", "dirt", "dead shrub"] should return ["diorite", "pink wool"].</li>
+                                            <li>["andesite", "grass", "dirt", "pink wool", "dead shrub"], ["diorite", "andesite", "grass", "dirt", "dead shrub"] should return an array with two items.</li>
+                                            <li>["andesite", "grass", "dirt", "dead shrub"], ["andesite", "grass", "dirt", "dead shrub"] should return [].</li>
+                                            <li>["andesite", "grass", "dirt", "dead shrub"], ["andesite", "grass", "dirt", "dead shrub"] should return an empty array.</li>
+                                            <li>[1, 2, 3, 5], [1, 2, 3, 4, 5] should return [4].</li>
+                                            <li>[1, 2, 3, 5], [1, 2, 3, 4, 5] should return an array with one item.</li>
+                                            <li>[1, "calf", 3, "piglet"], [1, "calf", 3, 4] should return ["piglet", 4].</li>
+                                            <li>[1, "calf", 3, "piglet"], [1, "calf", 3, 4] should return an array with two items.</li>
+                                            <li>[], ["snuffleupagus", "cookie monster", "elmo"] should return ["snuffleupagus", "cookie monster", "elmo"].</li>
+                                            <li>[], ["snuffleupagus", "cookie monster", "elmo"] should return an array with three items.</li>
+                                            <li>[1, "calf", 3, "piglet"], [7, "filly"] should return [1, "calf", 3, "piglet", 7, "filly"].</li>
+                                            <li>[1, "calf", 3, "piglet"], [7, "filly"] should return an array with six items.</li>
                                           </ul>
                                             
                                             <div class="function-question">
-                                              <p>empty function {</p>
-                                                <p>  return </p>
+                                              <p>function diffArray(arr1, arr2) {</p>
+                                                <p> const newArr = [];</p>
+                                                <p> return newArr;</p>
                                                 <p>}</p>
-                                                <p></p>
+                                                <p> return newArr;</p>
+                                                <p>diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]);</p>
                                             </div>
                                             
                                             <button id="show-answer-one" class="show-answer-btn">Show answer</button>
                                             <div class="resolved-function-screen">
-                                              <p>resolved function</p>
+                                              <p>function diffArray(arr1, arr2) {</p>
                                               <p></p>
                                               <p></p>
                                               <p></p>
