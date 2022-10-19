@@ -791,42 +791,64 @@
                                             <button id="show-answer-one" class="show-answer-btn">Show answer</button>
                                             <div class="resolved-function-screen">
                                               <p>function diffArray(arr1, arr2) {</p>
-                                              <p></p>
-                                              <p></p>
-                                              <p></p>
-                                              <p></p>
+                                              <p>let newArray1 = arr1[0]</p>
+                                              <p>let newArray2 = arr1[1]</p>
+                                              <p>let result = []</p>
+                                              <p>result.push(arr1.filter(difference => !arr2.includes(difference))) </p>
+                                              <p>result.push(arr2.filter(difference => !arr1.includes(difference))) </p>
+                                              <p>return result.flat()</p>
                                               <p>  }</p>
-                                              <p> </p>
+                                              <p>diffArray(["diorite", "andesite", "grass", "dirt", "pink wool", "dead shrub"], ["diorite", "andesite", "grass", "dirt", "dead shrub"]); </p>
                                               </div>
                                             <button id="hide-answer-one" class="hide-screen-btn">Hide answer</button>
                   
-                                            <h3>test title</h3>
+                                            <h3>Seek and Destroy</h3>
 
-                                            <p>description</p>
+                                            <p>You will be provided with an initial array (the first argument in the destroyer function), followed by one or more arguments. Remove all elements from the initial array that are of the same value as these arguments.
+
+                                              Note: You have to use the arguments object.</p>
                       
                                             <p>Tests</p>
                                             <ul>
-                                              <li></li>
-                                              <li></li>
-                                              <li></li>
-                                              <li></li>
+                                              <li>destroyer([1, 2, 3, 1, 2, 3], 2, 3) should return [1, 1].</li>
+                                              <li>destroyer([1, 2, 3, 5, 1, 2, 3], 2, 3) should return [1, 5, 1].</li>
+                                              <li>destroyer([3, 5, 1, 2, 2], 2, 3, 5) should return [1].</li>
+                                              <li>destroyer([2, 3, 2, 3], 2, 3) should return [].</li>
+                                              <li>destroyer(["tree", "hamburger", 53], "tree", 53) should return ["hamburger"].</li>
+                                              <li>destroyer(["possum", "trollo", 12, "safari", "hotdog", 92, 65, "grandma", "bugati", "trojan", "yacht"], "yacht", "possum", "trollo", "safari", "hotdog", "grandma", "bugati", "trojan") should return [12,92,65].</li>
+                                              
                                             </ul>
                                               
                                               <div class="function-question">
-                                                <p>empty function {</p>
-                                                  <p>  return </p>
+                                                <p>function destroyer(arr) {</p>
+                                                  <p>return arr; </p>
                                                   <p>}</p>
-                                                  <p></p>
+                                                  <p>destroyer([1, 2, 3, 1, 2, 3], 2, 3);</p>
                                               </div>
                                               
                                               <button id="show-answer-one" class="show-answer-btn">Show answer</button>
                                               <div class="resolved-function-screen">
-                                                <p>resolved function</p>
-                                                <p></p>
-                                                <p></p>
-                                                <p></p>
-                                                <p></p>
+                                                <p>function destroyer(arr) {</p>
+                                                <p>let array = arguments[0]</p>
+                                                <p>const indices = []</p>
+                                                <p>let newArray = []</p>
+                                                <p>for (let i = 1 ; i < arr.length ; i ++) {</p>
+                                                <p>const element =  arguments[i];</p>
+                                                <p>let idx = array.indexOf(element);</p>
+                                                <p>while (idx !== -1) {</p>
+                                                <p>indices.unshift(idx);</p>
+                                                <p>idx = array.indexOf</p>
+                                                <p>(element, idx + 1);</p>
+                                                <p>indices.sort(function(a,b){return a - b}).reverse()</p>
                                                 <p>  }</p>
+                                                <p>  }</p>
+                                                <p>for(let j = 0 ; j < indices.length ; j++) {</p>
+                                                  <p>array.splice(indices[j], 1) </p>
+                                                  <p>  }</p>
+                                                  <p>return array </p>
+                                                  <p>  }</p>
+                                                  <p> destroyer([1, 2, 3, 1, 2, 3], 2, 3);</p>
+                                                
                                                 <p> </p>
                                                 </div>
                                               <button id="hide-answer-one" class="hide-screen-btn">Hide answer</button>
