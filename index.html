@@ -853,34 +853,51 @@
                                                 </div>
                                               <button id="hide-answer-one" class="hide-screen-btn">Hide answer</button>
                     
-                                              <h3>test title</h3>
+                                              <h3>Wherefore art thou</h3>
 
-                                              <p>description</p>
+                                              <p>Make a function that looks through an array of objects (first argument) and returns an array of all objects that have matching name and value pairs (second argument). Each name and value pair of the source object has to be present in the object from the collection if it is to be included in the returned array.
+
+                                                For example, if the first argument is [{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], and the second argument is { last: "Capulet" }, then you must return the third object from the array (the first argument), because it contains the name and its value, that was passed on as the second argument.
+                                                
+                                                </p>
                         
                                               <p>Tests</p>
                                               <ul>
-                                                <li></li>
-                                                <li></li>
-                                                <li></li>
-                                                <li></li>
+                                                <li>whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], { last: "Capulet" }) should return [{ first: "Tybalt", last: "Capulet" }].</li>
+                                                <li>whatIsInAName([{ "apple": 1 }, { "apple": 1 }, { "apple": 1, "bat": 2 }], { "apple": 1 }) should return [{ "apple": 1 }, { "apple": 1 }, { "apple": 1, "bat": 2 }].</li>
+                                                <li>whatIsInAName([{ "apple": 1, "bat": 2 }, { "bat": 2 }, { "apple": 1, "bat": 2, "cookie": 2 }], { "apple": 1, "bat": 2 }) should return [{ "apple": 1, "bat": 2 }, { "apple": 1, "bat": 2, "cookie": 2 }].</li>
+                                                <li>whatIsInAName([{ "apple": 1, "bat": 2 }, { "apple": 1 }, { "apple": 1, "bat": 2, "cookie": 2 }], { "apple": 1, "cookie": 2 }) should return [{ "apple": 1, "bat": 2, "cookie": 2 }].</li>
+                                                <li>whatIsInAName([{ "apple": 1, "bat": 2 }, { "apple": 1 }, { "apple": 1, "bat": 2, "cookie": 2 }, { "bat":2 }], { "apple": 1, "bat": 2 }) should return [{ "apple": 1, "bat": 2 }, { "apple": 1, "bat": 2, "cookie":2 }].</li>
+                                                <li>whatIsInAName([{"a": 1, "b": 2, "c": 3}], {"a": 1, "b": 9999, "c": 3}) should return []</li>
+                                                <li>whatIsInAName([{"a": 1, "b": 2, "c": 3, "d": 9999}], {"a": 1, "b": 9999, "c": 3}) should return []</li>
+                                            
                                               </ul>
                                                 
                                                 <div class="function-question">
-                                                  <p>empty function {</p>
-                                                    <p>  return </p>
-                                                    <p>}</p>
+                                                  <p>function whatIsInAName(collection, source) {</p>
+                                                    <p>const arr = [];</p>
+                                                    <p>// Only change code below this line</p>
                                                     <p></p>
+                                                    <p>// Only change code above this line</p>
+                                                    <p>return arr;</p>
+                                                    <p>}</p>
+                                                    <p>whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], { last: "Capulet" });</p>
                                                 </div>
                                                 
                                                 <button id="show-answer-one" class="show-answer-btn">Show answer</button>
                                                 <div class="resolved-function-screen">
-                                                  <p>resolved function</p>
-                                                  <p></p>
-                                                  <p></p>
-                                                  <p></p>
-                                                  <p></p>
-                                                  <p>  }</p>
-                                                  <p> </p>
+                                                  <p>function whatIsInAName(collection, source) {</p>
+                                                    <p>const arr = [];</p>
+                                                    <p>// Only change code below this line</p>
+                                                    <p></p>
+                                                    <p></p>
+                                                    <p></p>
+                                                    <p></p>
+                                                    <p></p>
+                                                    <p>// Only change code above this line</p>
+                                                    <p>return arr;</p>
+                                                    <p>}</p>
+                                                  <p> whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], { last: "Capulet" });</p>
                                                   </div>
                                                 <button id="hide-answer-one" class="hide-screen-btn">Hide answer</button>
                       
