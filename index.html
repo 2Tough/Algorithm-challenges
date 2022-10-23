@@ -889,8 +889,24 @@
                                                   <p>function whatIsInAName(collection, source) {</p>
                                                     <p>const arr = [];</p>
                                                     <p>// Only change code below this line</p>
-                                                    <p></p>
-                                                    <p></p>
+                                                    <p>    const sourceEl = Object.keys(source)
+                                                      // Collection loop
+                                                      for (let i = 0 ; i < Object.keys(collection).length ; i++) {
+                                                          let signal = true
+                                                      // Source loop
+                                                        for (let j = 0 ; j < Object.keys(source).length ; j++) {
+                                                            console.log(collection[i][sourceEl[j]])
+                                                            
+                                                            if (!(collection[i][sourceEl[j]] === source[sourceEl[j]])) {
+                                                              signal = false
+                                                            } 
+                                                          }
+                                                          if (signal) {
+                                                              arr.push(collection[i])
+                                                       
+                                                        }   
+                                                       }</p>
+                                                    <p>Solution 2:</p>
                                                     <p></p>
                                                     <p></p>
                                                     <p></p>
@@ -901,28 +917,48 @@
                                                   </div>
                                                 <button id="hide-answer-one" class="hide-screen-btn">Hide answer</button>
                       
-                                                <h3>test title</h3>
+                                                <h3>Spinal Tap Case</h3>
 
-                                                <p>description</p>
+                                                <p>Convert a string to spinal case. Spinal case is all-lowercase-words-joined-by-dashes.
+
+                                                </p>
                           
                                                 <p>Tests</p>
                                                 <ul>
-                                                  <li></li>
-                                                  <li></li>
-                                                  <li></li>
-                                                  <li></li>
+                                                  <li>spinalCase("This Is Spinal Tap") should return the string this-is-spinal-tap.</li>
+                                                  <li>spinalCase("thisIsSpinalTap") should return the string this-is-spinal-tap.</li>
+                                                  <li>spinalCase("The_Andy_Griffith_Show") should return the string the-andy-griffith-show.</li>
+                                                  <li>spinalCase("Teletubbies say Eh-oh") should return the string teletubbies-say-eh-oh.</li>
+                                                  <li>spinalCase("AllThe-small Things") should return the string all-the-small-things.
+                                                  </li>
                                                 </ul>
                                                   
                                                   <div class="function-question">
-                                                    <p>empty function {</p>
-                                                      <p>  return </p>
-                                                      <p>}</p>
+                                                    <p>function spinalCase(str) {
+                                                      return str;
+                                                    }
+                                                    
+                                                    spinalCase('This Is Spinal Tap');</p>
+                                                  
                                                       <p></p>
                                                   </div>
                                                   
                                                   <button id="show-answer-one" class="show-answer-btn">Show answer</button>
                                                   <div class="resolved-function-screen">
-                                                    <p>resolved function</p>
+                                                    <p>function spinalCase(str) {
+                                                      let newArray = []
+                                                     let regex = /\s+|_+/g
+                                                       let text = str = str.replace(/([a-z])([A-Z])/g, "$1 $2");
+                                                    
+                                                     let newString = str.split('')
+                                                   
+                                                     let replaced = text.replace(regex, '-').toLowerCase()
+                                                     return replaced
+                                                       
+                                                   
+                                                   }
+                                                   
+                                                   spinalCase('This Is Spinal Tap');</p>
                                                     <p></p>
                                                     <p></p>
                                                     <p></p>
